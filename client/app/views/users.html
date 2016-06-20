@@ -1,0 +1,85 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Users</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a ui-sref="index.dashboard">Home</a>
+            </li>
+            <li>
+                <a>Settings</a>
+            </li>
+            <li class="active">
+                <strong>Users</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>List of registered users in the system</h5>
+
+                <div ibox-tools> </div>
+            </div>
+
+            <div class="ibox-content">
+              <button class="btn btn-primary " type="button"><i class="fa fa-user"></i>&nbsp;Add Users</button>
+
+
+                <input type="text" class="form-control input-sm m-b-xs" id="filter"
+                       placeholder="Search users">
+
+                <table class="footable table table-stripped" data-page-size="8" data-filter=#filter>
+                    <thead>
+                    <tr>
+
+                        <th>UserName</th>
+                        <th>Password</th>
+                        <th>Domain</th>
+                        <th data-hide="phone,tablet">IsAdmin</th>
+                        <th data-hide="phone,tablet">IsSupervisor</th>
+                        <th data-hide="phone,tablet">Creation</th>
+                        <th data-hide="phone,tablet">Is Active</th>
+                        <th data-hide="phone,tablet">Last Login</th>
+
+                        <th data-hide="phone,tablet">Action</th>
+                        <th data-hide="phone,tablet">Action</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr class="gradeC" ng-repeat="x in watu.watuList">
+
+                        <td>{{x.username}}</td>
+                        <td>{{x.password}}</td>
+                        <td>{{x.domain.insurers}} | {{x.domain.brokers}} </td>
+                        <td><i ng-class="x.isAdmin ? 'fa fa-check text-navy' : 'fa fa-close text-navy'"></td>
+                        <td><i ng-class="x.isSupervisor ? 'fa fa-check text-navy' : 'fa fa-close text-navy'"></td>
+                        <td><p ng-bind="x.creationDate | date:'dd/MM/yyyy'"></p></td>
+                        <td><i ng-class="x.isActive ? 'fa fa-check text-navy' : 'fa fa-close text-navy'"></td>
+                        <td><p ng-bind="x.lastloginDate | date:'dd/MM/yyyy'"></p></td>
+                        <td class="center"><button type="button" class="btn btn-warning"><i class="fa fa-wrench"> Edit</button></td>
+                        <td class="center"><button type="button" class="btn btn-danger"><i class="fa fa-wheelchair"> Disable</button></td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+
+                    <tr>
+                        <td colspan="5">
+                            <ul class="pagination pull-right"></ul>
+                        </td>
+                    </tr>
+
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

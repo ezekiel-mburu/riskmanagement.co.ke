@@ -1,0 +1,34 @@
+
+<div ng-include="'views/home_nav_bar.html'"></div>
+
+<div class="middle-box text-center loginscreen  animated fadeInDown" data-ng-init="mbwaKali.toka()">
+    <div>
+
+        <h3>You have logged out</h3>
+        <p>Have a good day.
+        </p>
+        <p>You can log back in</p>
+        <form class="m-t" role="form">
+            <div class="form-group">
+                <input type="email" class="form-control" ng-model="mbwaKali.jina" placeholder="Username" required="">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" ng-model="mbwaKali.siri" placeholder="Password" required="">
+            </div>
+            <button type="submit" ng-click="mbwaKali.ingia()" class="btn btn-primary block full-width m-b">Login</button>
+
+            <a ui-sref="forgot_password"><small>Forgot password?</small></a>
+
+        </form>
+        {{mbwaKali.message}}
+
+        <p class="m-t">
+          <small>
+            :: RiskManagement.co.ke ::  <br/>
+            Supporting your Enterprise Risk Management Framework Risk Identification and Measurement<br/>
+            Supported by Third Party Datasets  <br/>
+          </small>
+        </p>
+
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div ng-controller="ulizaJirani as u" class="sidebar-collapse">
+        <ul side-navigation class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+
+                <div class="dropdown profile-element" dropdown>
+                    <a class="dropdown-toggle" dropdown-toggle href>
+                            <span class="clear">
+                                <span class="block m-t-xs">
+                                    <strong class="font-bold">{{u.userDetails.personal.firstname}} {{u.userDetails.personal.secondname}}</strong>
+                             </span>
+                                <span class="text-muted text-xs block">{{u.userDetails.personal.email}}<b class="caret"></b></span>
+                            </span>
+                    </a>
+                    <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                        <li><a href="#/toka">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="logo-element">
+                    <i class="fa fa-umbrella"></i> + </i>
+                </div>
+
+            </li>
+
+            <li ui-sref-active="active">
+                <a ui-sref="index.underwrite"><i class="fa fa-book"></i> <span class="nav-label">Loan Approval</span> </a>
+            </li>
+
+            <li ui-sref-active="active">
+                <a ui-sref="index.minor"><i class="fa fa-user"></i> <span class="nav-label">My Profile</span> </a>
+            </li>
+
+
+        </ul>
+
+    </div>
+</nav>

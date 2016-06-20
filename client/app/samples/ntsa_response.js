@@ -1,0 +1,26 @@
+{
+  "status":"1",
+  "Error":"",
+  "_id":"WAUZZZ4G1CN054680",
+  "driverRefId":"KBY377H",
+  "driverRefIdType":"carRegNo",
+  "owner":[
+    {"PIN":"A004453736R",
+    "FIRSTNAME":"EZEKIEL",
+    "LASTNAME":"MBURU",
+    "ADDRESS":"482",
+    "TOWN":"NAIROBI",
+    "CODE":"00515",
+    "TELNO":"722540045"
+    ,"MIDDLENAME":"MACHARIA"}
+  ],
+  "vehicle":
+  {"ChassisNo":"WAUZZZ4G1CN054680",
+  "accidents":"",
+  "mileageOnPurchase":"",
+  "yearOfManufacture":"2011",
+  "carModel":"A7 S LINE TDI",
+  "carMake":"AUDI",
+  "regNo":"KBY377H"
+}
+}
